@@ -16,5 +16,3 @@ def contact(request):
 def store(request):
     return render(request, 'store.html')
 
-def sample(request):
-    return render(request, ('sample.html'))

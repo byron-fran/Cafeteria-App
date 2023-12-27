@@ -91,9 +91,11 @@
 	
 	    </p>
         <p class="m-0 mbt">
-        	<a href="sample.html" class="link">Política de privacidad</a> ·
-        	<a href="sample.html" class="link">Aviso legal</a> ·
-        	<a href="sample.html" class="link">Cookies</a>
+          {% for page in pages %}
+          <a href="{% url 'page' page.id page.title|slugify %}">{{page.title}}</a>
+          {% if not  forloop.last %}·{% endif %}
+          {% endfor %}
+
 		</p>
         <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
       </div>

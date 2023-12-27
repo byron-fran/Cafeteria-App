@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'Core',
     'Services.apps.ServicesConfig',
     'Blog',
-    'Social'
+    'Social',
+    'pages',
+    'ckeditor',
     
 ]
 
@@ -63,7 +65,8 @@ TEMPLATES = [
                  'C:\\Proyectos\\Python\\Django\\Cafeteria\\Core\\template',
                  'C:\\Proyectos\\Python\\Django\\Cafeteria\\Services\\template\\services',
                  'C:\\Proyectos\\Python\\Django\\Cafeteria\\Blog\\template\\blog',
-                 'C:\\Proyectos\\Python\\Django\\Cafeteria\\Blog\\template\\category'],
+                 'C:\\Proyectos\\Python\\Django\\Cafeteria\\Blog\\template\\category',
+                 'C:\\Proyectos\\Python\\Django\\Cafeteria\\pages\\templates\\pages'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +74,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'Social.processor.cxt_dict'
+                'Social.processor.cxt_dict',
+                'pages.processor.cxt_dict',
             ],
         },
     },
@@ -141,3 +145,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#ckeditor config
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+    }
+}
