@@ -16,27 +16,36 @@
               <span class="section-heading-upper">Envíanos tus dudas</span>
               <span class="section-heading-lower">Contacto</span>
             </h2>
+            {% if 'ok' in request.GET %}
+            <p>Exito</p>
+            {% endif %}
             <!-- Formulario de contacto -->
-            <form>
+            <form method='POST'>
+                {% csrf_token %}
                 <div class="form-group">
                     <label>Nombre *</label>
                     <div class="input-group">
-                        <input type="text" class="form-control">
+                        {{form.name}}
                     </div>
                 </div>
                 <div class="form-group">
+                    <ul>
+                        <li class='errorlist'>
+                            {{form.email.error}}
+                        </li>
+                    </ul>
+                
+                  
                     <label>Email *</label>
                     <div class="input-group">
-                        <input type="text" class="form-control">
+                        {{form.email}}
                     </div>
-                    <ul class="errorlist">
-                        <li>El email no es correcto.</li>
-                    </ul>
+        
                 </div>
                 <div class="form-group">
                     <label>Mensaje *</label>
                     <div class="input-group">
-                        <textarea class="form-control"></textarea>
+                       {{ form.message}}
                     </div>
                 </div>
                 <div class="text-center">

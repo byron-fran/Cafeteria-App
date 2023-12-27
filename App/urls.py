@@ -10,6 +10,7 @@ urlpatterns = [
     path('services', include('Services.urls')),
     path('blog/', include('Blog.urls')),
     path('page/', include('pages.urls')),
+    path('contact/', include('Contact.urls')),
 ]
 
 if settings.DEBUG:

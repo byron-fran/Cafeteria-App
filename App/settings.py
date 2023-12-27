@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'Social',
     'pages',
     'ckeditor',
+    'Contact'
     
 ]
 
@@ -66,7 +67,9 @@ TEMPLATES = [
                  'C:\\Proyectos\\Python\\Django\\Cafeteria\\Services\\template\\services',
                  'C:\\Proyectos\\Python\\Django\\Cafeteria\\Blog\\template\\blog',
                  'C:\\Proyectos\\Python\\Django\\Cafeteria\\Blog\\template\\category',
-                 'C:\\Proyectos\\Python\\Django\\Cafeteria\\pages\\templates\\pages'],
+                 'C:\\Proyectos\\Python\\Django\\Cafeteria\\pages\\templates\\pages',
+                 'C:\\Proyectos\\Python\\Django\\Cafeteria\\Contact\\templates\\contact',
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -152,3 +155,9 @@ CKEDITOR_CONFIGS = {
         'toolbar': 'Custom',
     }
 }
+
+#email config
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '5b74b7885a56e6'
+EMAIL_HOST_PASSWORD = '9c90b434402730'
+EMAIL_PORT = '2525'
