@@ -8,7 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('Core.urls')),
     path('services', include('Services.urls')),
-    path('blog', include('Blog.urls'))
+    path('blog/', include('Blog.urls'))
 ]
 
 if settings.DEBUG:

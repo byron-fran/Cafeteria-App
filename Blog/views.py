@@ -10,6 +10,5 @@ def blog(request):
 
 def category(request, category_id):
     #category = get_list_or_404(Category, id=category_id)
-    category = Category.objects.filter(id=category_id)
-
+    category = Post.objects.filter(id = category_id) 
     return render(request, 'category.html',{'category': category})
