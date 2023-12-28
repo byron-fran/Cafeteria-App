@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'Social',
     'pages',
     'ckeditor',
-    'Contact'
+    'Contact',
+    'Product.apps.ProductConfig',
     
 ]
 
